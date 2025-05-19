@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamed Khalil Albarede</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header {
+            position: fixed;
+            background-color: #680424;
+        }
+        @media only screen and (max-width: 600px) {
+            header {
+            position: fixed;
+            top: 30px;
+            border-radius: 0 10px 10px 0;
+
+        }
+        header li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 8px;
+        }
+        }
+        @media only screen and (min-width: 600px) {
+            header {
+            position: fixed;
+            top: 30px;
+            padding: 5px 10px;
+            border-radius: 0 20px 20px 0;
+        }
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0;
+        }
+        .content {
+            padding: 20px;
+            background: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-btn {
+            background-color: #680424;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+        }
+        .download-btn img {
+            width: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .download-btn {
+            background-color: #680424;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            position: fixed;
+            bottom: 15px;
+            left: 10px;
+        }
+        .download-btn img {
+            width: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul>
+                <li><a href="#" onclick="showArabic()">AR</a></li>
+                <li><a href="#" onclick="showEnglish()">EN</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div id="arabic" class="content">
+            <img src="image/Mohamed Melhem CV (Arabic).jpg" alt="السيرة الذاتية بالعربية">
+        </div>
+        <div id="english" class="content" style="display:none;">
+            <img src="image/Mohamed melhem CV (English).jpg" alt="CV in English">
+        </div>
+    </div>
+    <a href="pdf.zip" class="download-btn" download>
+        <img src="image/download.png" alt="">
+    </a>
+    <script>
+        function showArabic() {
+            document.getElementById('arabic').style.display = 'block';
+            document.getElementById('english').style.display = 'none';
+        }
+        function showEnglish() {
+            document.getElementById('arabic').style.display = 'none';
+            document.getElementById('english').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
